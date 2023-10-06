@@ -22,7 +22,7 @@ function useFavourites() {
         fetchOptions['body'] = JSON.stringify({value});
         fetchOptions['method'] = 'POST';
         setLoading(true)
-        fetch('/api/favourites/toggle', fetchOptions)
+        fetch('https://priceme-backend-production.up.railway.app/api/favourites/toggle', fetchOptions)
             .then(response => {
                 const d = response.json();
                 console.log(d)
@@ -37,7 +37,7 @@ function useFavourites() {
     const loadFavourites = useCallback(async () => {
         fetchOptions['body'] = undefined;
         fetchOptions['method'] = 'GET';
-        fetch('/api/favourites', fetchOptions)
+        fetch('https://priceme-backend-production.up.railway.app/api/favourites', fetchOptions)
             .then(response => {
                 const d = response.json();
                 console.log(d)
