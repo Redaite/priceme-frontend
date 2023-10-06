@@ -7,7 +7,7 @@ export async function loginUser(dispatch: any, loginPayload: any) {
 
     try {
         dispatch({ type: 'REQUEST_LOGIN' });
-        let response = await fetch(`https://priceme-backend-production.up.railway.appapi/auth/login`, requestOptions);
+        let response = await fetch(`https://priceme-backend-production.up.railway.app/api/auth/login`, requestOptions);
         let data = await response.json();
         console.log(data);
         if (data.success) {

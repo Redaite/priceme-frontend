@@ -17,7 +17,7 @@ import {loginUser, useAuthDispatch, useAuthState} from "../../contexts/auth";
 
 
 function LoginPage() {
-    const [username, setUsername] = React.useState('maru.nega@gmail.com');
+    const [username, setUsername] = React.useState('red@gmail.com');
     const [password, setPassword] = React.useState('12345678');
     const [error, setError] = React.useState('');
     const [isLoading, setIsLoading] = React.useState(false);
